@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 import { Link } from "react-router-dom";
 
@@ -8,7 +9,10 @@ import pencil from "../assets/pencil.svg";
 import link from "../assets/link.svg";
 
 export default function Header() {
-  const [projectName, setProjectName] = useState("Encode by rahul");
+  const [projectName, setProjectName] = useLocalStorage(
+    "ProjectName",
+    "Encode by rahul"
+  );
   const projectNameRef = useRef();
   function rename() {
     setProjectName("");

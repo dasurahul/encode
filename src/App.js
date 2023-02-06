@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -8,9 +8,9 @@ import Output from "./pages/Output";
 
 export default function App() {
   // states
-  const [html, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setJs] = useState("");
+  const [html, setHtml] = useLocalStorage("html", "");
+  const [css, setCss] = useLocalStorage("css", "");
+  const [js, setJs] = useLocalStorage("js", "");
 
   // srcDoc for iframe
   let srcDoc = `
