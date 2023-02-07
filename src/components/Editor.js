@@ -19,6 +19,7 @@ export default function Editor(props) {
         onChange={(value) => setValue(value)}
         value={value}
         theme="vs-dark"
+        options={{ automaticLayout: true }}
       />
     </div>
   );
