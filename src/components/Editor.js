@@ -26,6 +26,9 @@ export default function Editor(props) {
         height="300px"
         onChange={(value) => setValue(value)}
         value={value}
+        setOptions={{
+          useWorker: false,
+        }}
       />
     </div>
   );
