@@ -1,16 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function useLocalStorage(key, initialValue) {
   const keyName = "ENCODE-" + key;
   const [storedValue, setStoredValue] = useState(() => {
-    const item = window.localStorage.getItem(keyName);
+    const item = localStorage.getItem(keyName);
     return item ? JSON.parse(item) : initialValue;
   });
 
-  const setValue = (value) => {
-    setStoredValue(value);
-    window.localStorage.setItem(keyName, JSON.stringify(value));
-  };
+  useEffect(() => {
+    localStorage.setItem(keyName, JSON.stringify(storedValue));
+  }, [keyName, storedValue]);
 
-  return [storedValue, setValue];
+  return [storedValue, setStoredValue];
 }
