@@ -6,7 +6,7 @@ export default function Home(props) {
   return (
     <div className="h-screen bg-slate-900 text-gray-50">
       <Header />
-      <div className="p-4 grid grid-cols-3 gap-4">
+      <div className="p-4 flex gap-4 overflow-hidden">
         <Editor language="html" value={html} setValue={setHtml} />
         <Editor language="css" value={css} setValue={setCss} />
         <Editor language="javascript" value={js} setValue={setJs} />

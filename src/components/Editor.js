@@ -9,7 +9,7 @@ import "ace-builds/src-noconflict/theme-twilight";
 export default function Editor(props) {
   const { language, value, setValue } = props;
   return (
-    <div className="overflow-hidden">
+    <div className="min-w-[350px] overflow-hidden">
       <span className="h-8 p-1">
         {language === "html"
           ? "HTML"
