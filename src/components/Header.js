@@ -3,7 +3,6 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 
 import { Link } from "react-router-dom";
 
-// images
 import logo from "../assets/logo.svg";
 import pencil from "../assets/pencil.svg";
 import link from "../assets/link.svg";
