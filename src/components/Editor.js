@@ -9,7 +9,7 @@ import "ace-builds/src-noconflict/theme-twilight";
 export default function Editor(props) {
   const { language, value, setValue } = props;
   return (
-    <div className="min-w-[350px] overflow-hidden">
+    <div>
       <span className="h-8 p-1">
         {language === "html"
           ? "HTML"
@@ -24,6 +24,7 @@ export default function Editor(props) {
         mode={language}
         theme="twilight"
         height="300px"
+        width="425px"
         onChange={(value) => setValue(value)}
         value={value}
         setOptions={{
